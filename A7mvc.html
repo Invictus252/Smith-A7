@@ -31,7 +31,7 @@
             <div class="modal-content">
               <div class="modal-header bg-dark text-light">
                 <h5 class="modal-title">Play Again?</h5>
-                <button id='no' type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button id='NO' type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
@@ -97,7 +97,14 @@
                         $('#newGame').modal('hide');
                         $(".card").off('click');
                     }
-				});					
+				});	
+				$('#NO').on({
+    				click: function() 
+                    {
+                        $('#newGame').modal('hide');
+                        $(".card").off('click');
+                    }
+				});
 			});
             // run...
             initializeModel();
